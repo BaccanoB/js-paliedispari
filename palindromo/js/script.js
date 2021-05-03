@@ -3,29 +3,44 @@ var parolaUtente = prompt("Inserisci una parola e scopri se è palindroma!")
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
-// var parolaDivisa = parolaUtente.split("");
-// console.log(parolaDivisa);
+//  var parolaDivisa = parolaUtente.split("");
+//  console.log(parolaDivisa);
 
-// var parolaDivisa = parolaDivisa.reverse();
-// console.log(parolaDivisa);
+//  parolaDivisa = parolaDivisa.reverse();
+//  console.log(parolaDivisa);
 
-// var parolaAlContrario = parolaDivisa.join("");
-// console.log(parolaInvertita);
+//  var parolaAlContrario = parolaDivisa.join("");
+//  console.log(parolaAlContrario);
 
 
 function parolaAlContrario(parola) {
     var parolaEndStart = parola.split("");
-    var parolaEndStart = parola.reverse();
-    var parolaEndStart = parola.join("");
+    parolaEndStart = parolaEndStart.reverse();
+    parolaEndStart = parolaEndStart.join("");
     return parolaEndStart;
 }
 
-var parolaCapovolta = parolaAlContrario(parola);
+function palindroma(parola, parolaReverse) {
+    return parolaUtente == parolaCapovolta;
+}
 
-for (var i = 0; i < parolaUtente.length; i++) {
-    if ( parolaUtente == parolaCapovolta){
-        console.log("Si! la parola inserita è palindroma!");
-    } else {
-        console.log("No! la parola inserita non è palindroma!");
-    }
+/*
+function palindroma(parola) {
+    var parolaCapovolta = parolaAlContrario(parola);
+    return parola == parolaCapovolta;
+}
+
+if (palindroma("anna")) {
+
+} else {
+
+}
+*/
+
+var parolaCapovolta = parolaAlContrario(parolaUtente);
+
+if (palindroma(parolaUtente, parolaCapovolta)) {
+    console.log("Si! La parola inserita è una parola palindroma!");
+} else {
+    console.log("No! La parola inserita non è una parola palindroma!");
 }
