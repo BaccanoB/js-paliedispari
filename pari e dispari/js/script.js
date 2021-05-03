@@ -1,11 +1,14 @@
 // L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 do {
-var parolaUtente = prompt("Inserisci la tua scelta. Pari o Dispari?");
-console.log(parolaUtente);
-} while();
+    var parolaUtente = prompt("Inserisci la tua scelta. Pari o Dispari?");
+    console.log(parolaUtente);
+} while (parolaUtente !== "pari" || parolaUtente !== "dispari") ;
 
-var numeroUtente = parseInt(prompt("Inserisci un numero compreso tra 1 e 5!"));
-console.log("numero utente",numeroUtente);
+
+do {
+    var numeroUtente = parseInt(prompt("Inserisci un numero compreso tra 1 e 5!"));
+    console.log("numero utente",numeroUtente);
+} while (isNaN(numeroUtente) || numeroUtente > 5 || numeroUtente < 1);
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 
