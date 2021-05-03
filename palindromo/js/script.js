@@ -1,5 +1,6 @@
 // Chiedere all'utente di inserire una parola
 var parolaUtente = prompt("Inserisci una parola e scopri se è palindroma!")
+console.log(parolaUtente);
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
@@ -38,9 +39,12 @@ if (palindroma("anna")) {
 */
 
 var parolaCapovolta = parolaAlContrario(parolaUtente);
+console.log(parolaCapovolta);
 
 if (palindroma(parolaUtente, parolaCapovolta)) {
     console.log("Si! La parola inserita è una parola palindroma!");
+    document.getElementById("parola_scelta").innerHTML = "Si! La parola inserita è una parola palindroma!"
 } else {
     console.log("No! La parola inserita non è una parola palindroma!");
+    document.getElementById("parola_scelta").innerHTML = "No! La parola inserita non è una parola palindroma!"
 }
