@@ -2,7 +2,7 @@
 do {
     var parolaUtente = prompt("Inserisci la tua scelta. Pari o Dispari?");
     console.log(parolaUtente);
-} while (parolaUtente !== "pari" || parolaUtente !== "dispari") ;
+} while (parolaUtente !== "pari" && parolaUtente !== "dispari") ;
 
 
 do {
