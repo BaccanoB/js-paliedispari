@@ -1,4 +1,5 @@
 // L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+
 do {
     var parolaUtente = prompt("Inserisci la tua scelta. Pari o Dispari?");
     console.log(parolaUtente);
@@ -18,11 +19,12 @@ function numeroRandom(numero) {
     return Math.floor((Math.random() * 5) +1);
 }
 
-var numeroComputer = numeroRandom(numeroUtente);
+var numeroComputer = numeroRandom(numeroComputer);
 console.log("numero computer",numeroComputer);
 document.getElementById("computer").innerHTML = "Il numero scelto dal computer è " + numeroComputer;
 
 // Sommiamo i due numeri
+
 var somma = numeroUtente + numeroComputer; 
 console.log("somma",somma);
 document.getElementById("somma").innerHTML = "La somma è " + somma;
@@ -51,6 +53,3 @@ if (parolaUtente.toLowerCase() == risultato.toLowerCase()) {
 }
 
 
-if ((parolaUtente !== "pari") || (parolaUtente !== "dispari")) {
-
-}
